@@ -19,10 +19,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 
-const logger = (req, res, next) =>{
-    console.log('inside the logger');
-    next();
-}
+// const logger = (req, res, next) =>{
+//     console.log('inside the logger');
+//     next();
+// }
 
 const verifyToken = (req, res, next) =>{
     // console.log('inside verifyToken logger', req.cookies);
@@ -95,7 +95,7 @@ async function run() {
 
 
     //job api
-    app.get('/jobs', logger, async(req, res) =>{
+    app.get('/jobs', async(req, res) =>{
         console.log('now inside the api callback')
         const email = req.query.email;
         let query = {};
