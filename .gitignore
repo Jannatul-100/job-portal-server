@@ -1,0 +1,4 @@
+node_modules
+.env
+_jwt_token_steps.js
+.vercel
